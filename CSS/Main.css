@@ -29,6 +29,22 @@ header{
     z-index: 1000;
 }
 
+.common-button{
+    background-color:#212529;
+    color: #ffffff;
+    padding: 10px 35px;
+    border: none;
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1em;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+.common-button:hover{
+    background-color: #74C69D;
+}
+
 /* Mobile-first styles */
 .header_logo img {
     width: 120px;
@@ -121,6 +137,7 @@ header{
 
 .hero-content button:hover{
     background-color: #212529;
+    color: #ffffff;
 }
 
 /* homepage-Partners sections styles */
@@ -146,21 +163,7 @@ header{
 
 }
 
-.common-button{
-    background-color:#212529;
-    color: #ffffff;
-    padding: 10px 35px;
-    border: none;
-    border-radius: 5px;
-    font-family: "Poppins", sans-serif;
-    font-size: 1.1em;
-    letter-spacing: 2px;
-    margin-bottom: 30px;
-}
 
-.common-button:hover{
-    background-color: #F5F5F5;
-}
 
 /* homepage-about, about2 sections styles */
 
@@ -189,8 +192,82 @@ header{
     height: auto;
 }
 
+/* homepage-team section styles */
+
+.team-section{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    margin-top: 20px;
+}
+
+.team-text{
+    text-align: center;
+}
+
+.team-text h3{
+    color: #74C69D;
+    font-size: 1.3em;
+    letter-spacing: 5px;
+    margin-bottom: 15px;
+}
+
+.team-text p{
+    font-size: 1.5em;
+    margin-top: 15px;
+}
+
+.team-section .team-card{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 3em;
+}
+.team-card .team_card-content{
+    border-radius: 12px;
+    box-shadow: 10px 10px 20px#b6b6b6;
+    padding: 50px 60px;
+}
+
+.team-card img{
+    width: 250px;
+    margin-bottom: 30px;
+}
+
+.team-card figcaption{
+    font-size: 1.5em;
+    font-weight: 800;
+}
+
+.team-card p{
+    font-size: 1.2em;
+}
+
+/* Home Page | footer section styles */
+
+footer{
+    background-color: #74C69D;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
 
 
+.social-media .footer-icons{
+    padding: 20px 8px 0 8px;
+    font-size: 1.5em;
+    color: #ffffff;
+}
+
+
+footer .footer-text{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1.4rem;
+    color: #ffffff;
+}
 
 /* Tablet styles */
 @media screen and (min-width: 768px) {
@@ -225,6 +302,44 @@ header{
     .nav-menu li a {
         padding: 5px;
     }
+
+    .partners_Section-text h1{
+        font-size: 1.6em;
+    }
+
+    .partners_Section-text p{
+        font-size: 1.2em;
+    }
+
+    .hA-text{
+        margin-left: 60px;
+    }
+
+    .hA-text  h1{
+        width: 90%;
+    }
+
+    .hA-text p{
+        font-size: 1.2em;
+        width: 90%;
+    }
+
+    .team-section .team-card{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        justify-content: center;
+        align-items: center;
+        gap: 0.8em;
+    }
+
+    .team-card .team_card-content{
+        border-radius: 12px;
+        box-shadow: 5px 5px 10px#b6b6b6;
+        padding: 40px 50px;
+    }
+        
+
+
 }
 
 /* Desktop styles */
@@ -275,6 +390,104 @@ header{
         
         
     }
+
+    /* homepage-Partners sections styles */
+
+
+    .partners-logos{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-content: center;
+        gap: 2em;
+    }
+
+    .fb_logo{
+        padding-top: 10px;
+    }
+
+    .MS-Logo, .sp_logo{
+        margin-bottom: 20px;
+        width: 110px;
+    }
+
+    /* homepage-about, about2 sections styles */
+
+    .home-about{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        justify-content: center;
+        align-content: center;
+        padding-left: 60px;
+    }
+
+    .hA-text  h1{
+        font-size: 2em;
+        width: 90%;
+    }
+
+    .hA-text p{
+        font-size: 1.2em;
+        width: 90%;
+    }
+
+    .second-about{
+        direction: rtl;
+        padding-right: 60px;
+    }
+
+    .second-about button{
+        margin-left: 80px;
+    }
+
+
+    /* homepage-team section styles */
+
+    .team-section{
+        margin-top: 6em;
+    }
+  
+    .team-section .team-card{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 1.5em;
+    }
+   
+
+    .team-card img{
+        width: 200px;
+        margin-bottom: 30px;
+    }
+
+
+    /* Home Page | footer section styles */
+
+    footer{
+        background-color: #74C69D;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content:space-between;
+        align-items: center;
+        padding: 20px 90px 20px 90px
+    }
+
+
+    .social-media .footer-icons{
+        padding: 20px 8px 0 8px;
+        font-size: 1.2em;
+        color: #ffffff;
+    }
+
+
+    footer .footer-text{
+        padding-top: 20px;
+        font-size: 1rem;
+        color: #ffffff;
+    }
+
+
+
+
 
 }
 
